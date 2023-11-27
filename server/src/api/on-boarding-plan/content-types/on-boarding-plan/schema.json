@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "on_boarding_plans",
+  "info": {
+    "singularName": "on-boarding-plan",
+    "pluralName": "on-boarding-plans",
+    "displayName": "OnBoardingPlan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "onboardingPlanModules": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::on-boarding-plan-module.on-boarding-plan-module",
+      "mappedBy": "on_boarding_plan"
+    },
+    "suggestFor": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::speciality.speciality",
+      "mappedBy": "on_boarding_plan"
+    },
+    "deadlineStart": {
+      "type": "integer"
+    },
+    "deadlineFinish": {
+      "type": "integer"
+    },
+    "onboardingPlanNodesEdges": {
+      "type": "json"
+    },
+    "specialities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::speciality.speciality",
+      "mappedBy": "onBoardingPlan"
+    }
+  }
+}

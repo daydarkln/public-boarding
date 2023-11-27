@@ -1,0 +1,37 @@
+/* OnboardingProgress.module.css */
+.card {
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 20px;
+  color: #1890ff;
+}
+
+.progress {
+  margin: 20px 0;
+}
+
+.stepList {
+  list-style: none;
+  padding: 0;
+}
+
+.stepItem {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.completed::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: green;
+}
+
+.stepDescription {
+  margin-left: 10px;
+}

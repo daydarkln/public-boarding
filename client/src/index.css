@@ -1,0 +1,100 @@
+/*@tailwind base;*/
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.text-updater-node {
+  border: 1px solid #eee;
+  padding: 5px;
+  border-radius: 5px;
+  background: white;
+}
+
+.text-updater-node label {
+  display: block;
+  color: #777;
+  font-size: 12px;
+}
+
+.react-flow__handle {
+  border: none;
+  border-radius: 5px 0 0 5px;
+  height: 40px;
+  right: 0;
+}
+
+.react-flow__handle-left {
+  border-radius: 0 5px 5px 0;
+  left: 0;
+}
+
+.react-flow__handle-connecting {
+  background: #ff6060;
+}
+
+.react-flow__handle-valid {
+  background: #55dd99;
+}
+
+:where(.css-dev-only-do-not-override-ke8ehj).ant-menu-vertical >.ant-menu-item {
+  height: auto;
+}
+
+.companyPrefix-layout .companyPrefix-sider .ant-layout-sider-children,
+.companyPrefix-layout .ant-layout-header.companyPrefix-layout-header-fixed-header {
+  border: none;
+}
+
+:where(.css-dev-only-do-not-override-3rx5jy).ant-layout .ant-layout-header {
+  margin-bottom: 10px;
+}
+
+.ant-pro-list .ant-pro-card {
+  background: none;
+
+}
+
+.ant-pro-list .ant-pro-card-body {
+  padding: 0;
+}
+
+.mantine-Editor-root {
+  border: 2px dashed gray;
+  border-radius: 10px;
+  padding: 0 50px;
+}
+
+.mantine-Editor-root .ProseMirror {
+  border-width: 0;
+}
+
+.atcb-list-wrapper.atcb-dropoverlay {
+  width: 200px;
+}
+
+.ant-pro-card-actions {
+  border-radius: 0 0 5px 5px;
+}

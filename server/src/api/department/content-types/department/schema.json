@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "departments",
+  "info": {
+    "singularName": "department",
+    "pluralName": "departments",
+    "displayName": "Department",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::company.company",
+      "inversedBy": "departments"
+    },
+    "specialities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::speciality.speciality",
+      "mappedBy": "department"
+    },
+    "employees": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::employee.employee",
+      "mappedBy": "department"
+    },
+    "on_boarding_result": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::on-boarding-result.on-boarding-result",
+      "mappedBy": "department"
+    },
+    "description": {
+      "type": "text"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "department"
+    }
+  }
+}

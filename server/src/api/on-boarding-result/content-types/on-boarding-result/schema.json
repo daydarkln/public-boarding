@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "on_boarding_results",
+  "info": {
+    "singularName": "on-boarding-result",
+    "pluralName": "on-boarding-results",
+    "displayName": "OnBoardingResult"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "employee": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee.employee",
+      "inversedBy": "on_boarding_result"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company",
+      "inversedBy": "on_boarding_result"
+    },
+    "department": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::department.department",
+      "inversedBy": "on_boarding_result"
+    },
+    "speciality": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::speciality.speciality",
+      "inversedBy": "on_boarding_result"
+    }
+  }
+}

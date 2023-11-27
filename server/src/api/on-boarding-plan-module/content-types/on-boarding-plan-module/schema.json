@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "on_boarding_plan_modules",
+  "info": {
+    "singularName": "on-boarding-plan-module",
+    "pluralName": "on-boarding-plan-modules",
+    "displayName": "OnBoardingPlanModule",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "specialities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::speciality.speciality",
+      "mappedBy": "on_boarding_plan_module"
+    },
+    "on_boarding_plan": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::on-boarding-plan.on-boarding-plan",
+      "inversedBy": "onboardingPlanModules"
+    },
+    "duration": {
+      "type": "integer"
+    },
+    "moduleType": {
+      "type": "enumeration",
+      "enum": [
+        "text",
+        "test"
+      ]
+    },
+    "moduleTypeData": {
+      "type": "json"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employees",
+  "info": {
+    "singularName": "employee",
+    "pluralName": "employees",
+    "displayName": "employee",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "surname": {
+      "type": "string"
+    },
+    "password": {
+      "type": "password"
+    },
+    "confirmPassword": {
+      "type": "password"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::company.company",
+      "inversedBy": "employees"
+    },
+    "department": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::department.department",
+      "inversedBy": "employees"
+    },
+    "speciality": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::speciality.speciality",
+      "inversedBy": "employees"
+    },
+    "on_boarding_result": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::on-boarding-result.on-boarding-result",
+      "mappedBy": "employee"
+    },
+    "manager": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    },
+    "onboardingPlan": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::on-boarding-plan.on-boarding-plan"
+    },
+    "isManager": {
+      "type": "boolean"
+    },
+    "telegram": {
+      "type": "string"
+    }
+  }
+}

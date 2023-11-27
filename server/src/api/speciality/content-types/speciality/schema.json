@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "specialities",
+  "info": {
+    "singularName": "speciality",
+    "pluralName": "specialities",
+    "displayName": "Speciality",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "department": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::department.department",
+      "inversedBy": "specialities"
+    },
+    "employees": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "speciality"
+    },
+    "on_boarding_plan_module": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::on-boarding-plan-module.on-boarding-plan-module",
+      "inversedBy": "specialities"
+    },
+    "on_boarding_result": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::on-boarding-result.on-boarding-result",
+      "mappedBy": "speciality"
+    },
+    "on_boarding_plan": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::on-boarding-plan.on-boarding-plan",
+      "inversedBy": "suggestFor"
+    },
+    "onBoardingPlan": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::on-boarding-plan.on-boarding-plan",
+      "inversedBy": "specialities"
+    }
+  }
+}
